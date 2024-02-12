@@ -1,7 +1,2 @@
 #!/bin/bash
-
-src_dir=$(pwd)
-
-dest_dir=$(dirname "$src_dir")
-
-cp -u "$src_dir"/*.html "$dest_dir"
+find . -maxdepth 1 -type f -name "*.html" -exec cp -u {} ../ \;
